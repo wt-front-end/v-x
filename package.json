@@ -1,0 +1,53 @@
+{
+  "name": "v-x",
+  "version": "0.0.0",
+  "description": "脱敏指令",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wt-front-end/v-x.git"
+  },
+  "keywords": [
+    "v-x",
+    "脱敏"
+  ],
+  "author": "xkloveme <xkloveme@gmail.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "exports": {
+    ".": {
+      "import": "./lib/index.es.js",
+      "require": "./lib/index.cjs.js",
+      "types": "./lib/types/index.d.ts"
+    }
+  },
+  "main": "./lib/index.cjs.js",
+  "module": "./lib/index.es.js",
+  "types": "./lib/types/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./lib/types/*"
+      ]
+    }
+  },
+  "files": [
+    "lib"
+  ],
+  "bugs": {
+    "url": "https://github.com/wt-front-end/v-x/issues"
+  },
+  "homepage": "https://github.com/wt-front-end/v-x#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "jxk": "^0.1.5",
+    "vite": "^5.4.2",
+    "vite-plugin-git-version": "^1.0.7"
+  }
+}
