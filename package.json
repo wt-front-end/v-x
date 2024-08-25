@@ -1,5 +1,5 @@
 {
-  "name": "v-x",
+  "name": "@watone/v-x",
   "version": "0.0.0",
   "description": "脱敏指令",
   "scripts": {
