@@ -4,7 +4,8 @@
   "description": "脱敏指令",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "vite build"
+    "build": "vite build",
+    "release": "bumpp"
   },
   "repository": {
     "type": "git",
@@ -43,9 +44,8 @@
     "url": "https://github.com/wt-front-end/v-x/issues"
   },
   "homepage": "https://github.com/wt-front-end/v-x#readme",
-  "dependencies": {
-  },
   "devDependencies": {
+    "bumpp": "^9.5.2",
     "jxk": "^0.1.5",
     "vite": "^5.4.2",
     "vite-plugin-git-version": "^1.0.7"
