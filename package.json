@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "vite build",
-    "release": "npm run bumpp"
+    "release": "bumpp"
   },
   "repository": {
     "type": "git",
