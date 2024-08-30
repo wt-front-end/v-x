@@ -1,10 +1,10 @@
 /*
  * @Author: xkloveme
  * @Date: 2024-05-28 16:45:56
- * @LastEditTime:2024-08-25 22:27:09
- * @LastEditors:xkloveme
+ * @LastEditTime: 2024-08-29 17:47:13
+ * @LastEditors: huwb 15001206751@139.com
  * @Description: 脱敏自定义指令
- * @FilePath:/v-x/index.js
+ * @FilePath: \v-x\index.js
  * @Copyright © xkloveme
  */
 import { mask_address, mask_idcard, mask_name, mask_phone } from 'jxk'
@@ -17,7 +17,7 @@ const handlers = {
   default: mask_idcard,
 }
 
-function loadStyleString (css) {
+function loadStyleString(css) {
   const style = document.createElement('style')
   style.textContent = css
   if (document.head) {
@@ -42,6 +42,7 @@ const createMaskElement = (input, elm) => {
   div.style.display = 'flex'
   div.style.alignItems = 'center'
   div.style.color = window.getComputedStyle(el, null).getPropertyValue('color') || '#000'
+  div.style.userSelect = 'text'
   const placeholder = input?.getAttribute('placeholder')
   if (placeholder) {
     div.setAttribute('placeholder', placeholder)
@@ -75,13 +76,14 @@ const setTextContent = (div, handler, input) => {
 }
 
 export default {
-  mounted (el, binding) {
+  mounted(el, binding) {
     if (binding.value === false) return
     const handler = handlers[binding.arg] || handlers.default
     let input = el.querySelector('input')
     const div = createMaskElement(input, el)
     if (!input) {
       el.style.position = 'relative'
+      el.style.userSelect = 'none'
       div.style.position = 'absolute'
       el.appendChild(div)
       input = el
@@ -104,7 +106,7 @@ export default {
     setTextContent(div, handler, input)
     toggleVisibility(div, input)
   },
-  updated (el, binding) {
+  updated(el, binding) {
     if (binding.value === false) return
     const handler = handlers[binding.arg] || handlers.default
     const div = el.querySelector('.tuomindiv')
