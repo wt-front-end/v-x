@@ -46,7 +46,7 @@
   "homepage": "https://github.com/wt-front-end/v-x#readme",
   "devDependencies": {
     "bumpp": "^9.5.2",
-    "jxk": "^0.1.5",
+    "jxk": "^0.1.6",
     "vite": "^5.4.2",
     "vite-plugin-git-version": "^1.0.7"
   }
