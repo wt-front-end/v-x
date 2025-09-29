@@ -1,3 +1,11 @@
+<!--
+ * @Author: huwb 15001206751@139.com
+ * @Date: 2024-08-29 17:41:11
+ * @LastEditors: huwb 15001206751@139.com
+ * @LastEditTime: 2025-09-29 17:15:52
+ * @FilePath: \v-x\README.md
+ * @Description: 
+-->
 # v-x 脱敏自定义指令
 
 <p align="center">
@@ -18,6 +26,7 @@ v-x 是一个 Vue 自定义指令,用于实现数据脱敏功能。它可以对�
 
 ## 功能特点
 
+- 兼容Vue2/Vue3
 - 支持多种数据类型的脱敏:身份证、姓名、电话、地址
 - 可自定义脱敏规则
 - 支持输入框和文本元素
